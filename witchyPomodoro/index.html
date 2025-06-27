@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witchy Focus Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="timer-contain">
+    <div class="settings">
+      <button aria-label="Settings" class="settings-btn" id="settings-btn">
+        ⚙️
+      </button>
+    </div>
+    <div class="timer-head">
+      <h1>
+        <span role="img" aria-label="stars">🌙</span>
+        Witchy Focus
+      </h1>
+    </div>
+
+    <!-- Mode Toggles -->
+
+    <div class="mode-toggle">
+      <button class="mode-btn" id="focus">Focus</button>
+      <button class="mode-btn" id="breathe">Breather</button>
+      <button class="mode-btn" id="cat-nap">Cat Nap</button>
+    </div>
+
+    <!-- Timer Display -->
+
+    <div class="timer-disp" id="time-disp">
+      25:00
+    </div>
+
+    <!-- Control -->
+
+    <div class="control">
+      <button class="control-btn start-pause" id="start-pause">
+        Start
+      </button>
+      <button class="control-btn reset" id="reset">
+        Reset
+      </button>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal" id="settings-modal">
+    <div class="modal-content">
+      <h3>
+        <span role="img" aria-label="clock">⏰</span>
+        Time Adjust
+      </h3>
+      <div class="form-group">
+        <label>Focus Time (minutes)</label>
+        <input id="focus-time-input">
+      </div>
+      <div class="form-group">
+        <label>Time to breathe (minutes)</label>
+        <input id="breathe-time-input">
+      </div>
+      <div class="form-group">
+        <label>Cat Nap (minutes)</label>
+        <input id="cat-nap-time-input">
+      </div>
+      <div class="modal-btns">
+        <button class="cancel-btn" id="cancel-btn">Cancel</button>
+        <button class="save-btn" id="save-btn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Modal -->
+  <div class="custom-alert-box" id="custom-alert-box">
+    <div class="custom-alert-content">
+      <p class="custom-alert-message" id="custom-alert-message">
+        Changes Saved
+      <p>
+        <button class="custom-alert-btn" id="custom-alert-btn">
+          Cool
+        </button>
+    </div>
+  </div>
+</body>
+</html>

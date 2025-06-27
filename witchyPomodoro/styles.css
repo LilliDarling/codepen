@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
+
+body {
+  font-family: "Emilys Candy", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c24;
+}
+
+.timer-contain {
+  background-color: #25232e;
+  border-radius: 10px;
+  border: solid #fff 1px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 16rem;
+  height: 22rem;
+}
+
+.timer-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #a3b18a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 1.5px;
+}
+
+.settings {
+  display: flex;
+  justify-content: end;
+}
+
+.settings-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+.settings-btn:hover {
+  transform: rotate(30deg);
+}
+
+.mode-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.mode-btn {
+  cursor: pointer;
+  font-family: "Emilys Candy";
+  font-size: 16px;
+  border: solid #fff 1px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+  padding: 2px 8px;
+  letter-spacing: 1px;
+}
+
+.mode-btn.active {
+  background-color: #b76e79;
+  color: #fff;
+}
+
+.mode-btn:not(.active) {
+  background-color: #213129;
+  color: #e0e0e0;
+}
+
+.mode-btn:hover:not(.active) {
+  background-color: #5a7a60;
+}
+
+.timer-disp {
+  font-size: 4rem;
+  color: #a3b18a;
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+
+.control {
+  display: flex;
+  justify-content: space-around;
+}
+
+.control-btn {
+  cursor: pointer;
+  font-family: "Emilys Candy";
+  font-size: 20px;
+  letter-spacing: 1px;
+  border: solid #fff 1px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+  padding: 4px 12px;
+  color: #cacfd6;
+}
+
+.control-btn.start-pause {
+  background-color: #213129;
+}
+
+.control-btn.start-pause:hover {
+  background-color: #5e8b7e;
+}
+
+.control-btn.reset {
+  background-color: #b76e79;
+}
+
+.control-btn.reset:hover {
+  background-color: #cc828e;
+}
+
+.modal {
+  position: fixed;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: #25232e;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h3 {
+  color: #da627d;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 1.5px;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #81c784;
+  letter-spacing: 1px;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  border: 1px solid #5e8b7e;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #e0e0e0;
+  background-color: #3a3a40;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #81c784;
+  box-shadow: 0 0 0 3px rgba(129, 199, 132, 0.3);
+}
+
+.modal-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.modal-btns button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  color: #cacfd6;
+  font-family: "Emilys Candy";
+}
+
+.modal-btns .save-btn {
+  background-color: #517664;
+  border: none;
+}
+
+.modal-btns .save-btn:hover {
+  background-color: #213129;
+  transform: translateY(-1px);
+}
+
+.modal-btns .cancel-btn {
+  background-color: #da627d;
+  color: #e0e0e0;
+  border: none;
+}
+
+.modal-btns .cancel-btn:hover {
+  background-color: #555;
+  transform: translateY(-1px);
+}
+
+.custom-alert-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.custom-alert-box.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.custom-alert-content {
+  background-color: #282830;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  transform: translateY(-15px);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-alert-message {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #cacfd6;
+  margin-bottom: 1.5rem;
+  font-family: "Emilys Candy";
+}
+
+.custom-alert-btn {
+  background-color: #517664;
+  color: #cacfd6;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-family: "Emilys Candy";
+}
+
+.custom-alert-btn:hover {
+  background-color: #5e8b7e;
+  transform: translateY(-1px);
+}
