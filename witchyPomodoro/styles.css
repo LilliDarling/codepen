@@ -7,7 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1c1c24;
+  background-color: transparent;
   min-height: 100vh;
   margin: 0;
   overflow: hidden;
@@ -67,17 +67,18 @@ h1 {
   justify-content: center;
   gap: 0.5rem;
   margin-bottom: 8px;
+  margin-top: 6px;
   flex-wrap: wrap;
 }
 
 .mode-btn {
   cursor: pointer;
   font-family: "Emilys Candy";
-  font-size: 15px;
+  font-size: 18px;
   border: solid #fff 1px;
   border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
-  padding: 2px 6px;
+  padding: 2px 4px;
   letter-spacing: 1px;
   flex-shrink: 0;
   flex-grow: 1;
@@ -101,13 +102,11 @@ h1 {
 .timer-disp {
   font-size: 4rem;
   color: #a3b18a;
-  padding: 1rem;
-  margin-bottom: 10px;
+  padding: 0.5rem;
+  margin-bottom: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
-  font-size: clamp(2rem, 10vw, 4rem);
 }
 
 .control {
